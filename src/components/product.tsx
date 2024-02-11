@@ -1,3 +1,4 @@
+import { ForwardedRef, forwardRef } from "react";
 import {
     Image,
     ImageProps,
@@ -16,10 +17,10 @@ type ProductProps = TouchableOpacityProps & {
     data: ProductDataProps
 }
 
-export function Product({ data, ...rest }: ProductProps) {
+export const Product = forwardRef<TouchableOpacity, ProductProps>(({ data, ...rest }, ref) => {
     console.log(data.thumbnail)
     return (
-        <TouchableOpacity
+        <TouchableOpacity ref={ref}
             className="w-full flex-row items-center pb-4"
             {...rest}>
             <Image source={data.thumbnail} className="w-20 h-20 rounded-md" />
@@ -34,4 +35,4 @@ export function Product({ data, ...rest }: ProductProps) {
             </View>
         </TouchableOpacity>
     )
-}
+})
