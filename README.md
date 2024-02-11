@@ -13,3 +13,8 @@ $ npx tailwindcss init
 ```bash
 $ npx expo install expo-font @expo-google-fonts/inter
 ```
+
+### zustand
+```bash
+$ npm install zustand
+```
