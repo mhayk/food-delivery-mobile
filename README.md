@@ -8,3 +8,8 @@
 $ npm install tailwindcss
 $ npx tailwindcss init
 ```
+
+### Google Fonts with Expo
+```bash
+$ npx expo install expo-font @expo-google-fonts/inter
+```
